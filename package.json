@@ -61,6 +61,9 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vue/babel-plugin-jsx": "^1.2.2",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.13",
     "vite-plugin-node-polyfills": "^0.22.0"
   }

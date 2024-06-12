@@ -1,5 +1,17 @@
 Included dependencies:
 
+@tanstack/table-core
+version: 8.17.3
+license: MIT
+
+@tanstack/vue-table
+version: 8.17.3
+license: MIT
+
+@toast-ui/react-calendar
+version: 2.1.3
+license: MIT
+
 @vue/reactivity
 version: 3.4.27
 license: MIT
@@ -15,6 +27,22 @@ license: MIT
 @vue/shared
 version: 3.4.27
 license: MIT
+
+react
+version: 18.3.1
+license: MIT
+
+react-dom
+version: 18.3.1
+license: MIT
+
+scheduler
+version: 0.23.2
+license: MIT
+
+veaury
+version: 2.4.0
+license: ISC
 
 vite-plugin-node-polyfills
 version: 0.22.0

@@ -40,8 +40,6 @@ import {ref} from 'vue'
 import { applyPureReactInVue, injectSyncUpdateForPureReactInVue } from 'veaury'
 import ReactSimpleInput from "./react_app/Input";
 
-// import '@nextcloud/dialogs/styles/toast.scss'
-
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 import { showError, showSuccess } from '@nextcloud/dialogs'
