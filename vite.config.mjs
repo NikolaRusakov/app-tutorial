@@ -7,7 +7,10 @@ import veauryVitePlugins from "veaury/vite/index.js";
 // import veauryVitePlugins from 'veaury/vite/esm'
 
 import { nodePolyfills } from "vite-plugin-node-polyfills";
-import vueJsx from "@vitejs/plugin-vue-jsx"; // Added this!
+import vueJsx from "@vitejs/plugin-vue-jsx"; 
+
+import commonjs from '@rollup/plugin-commonjs';
+
 // { customElement: true }
 const yourOverrides = defineConfig({
   // root: "src",
@@ -28,23 +31,29 @@ const yourOverrides = defineConfig({
 //     loader: { test: /\.(js|ts|vue)$/, use: "vue-loader" },
 //   },
   plugins: [
-    // nodePolyfills(),
+    nodePolyfills(),
     // Turn off vue and vuejsx plugins
     // vue(),
     // vueJsx(),
     // When the type of veauryVitePlugins is set to vue,
     // only jsx in files in the directory named 'react_app' will be parsed with react jsx,
     // and jsx in other files will be parsed with vue jsx
-    // veauryVitePlugins({
-    //   type: "vue",
-    //     // type: 'react',
-    //   // Configuration of @vitejs/plugin-vue
-    //   // vueOptions: {...},
-    //   // Configuration of @vitejs/plugin-react
-    //   // reactOptions: {...},
-    //   // Configuration of @vitejs/plugin-vue-jsx
-    //     // vueJsxOptions: {}
-    // }),
+    commonjs(),
+    veauryVitePlugins({
+      type: "vue",
+        // type: 'react',
+      // Configuration of @vitejs/plugin-vue
+      vueOptions: {
+        style: {
+          trim: true,
+        },
+        production: true
+      },
+      // Configuration of @vitejs/plugin-react
+      // reactOptions: {...},
+      // Configuration of @vitejs/plugin-vue-jsx
+        // vueJsxOptions: {}
+    }),
   ],
   // css: {
   //     preprocessorOptions: {
@@ -63,6 +72,7 @@ export default createAppConfig(
   {
     // entry points
     main: "src/main.js",
+    // inlineCSS: true,
     // settings: 'src/settings.js',
   },
   {
