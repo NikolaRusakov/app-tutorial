@@ -35,16 +35,16 @@ const yourOverrides = defineConfig({
     // When the type of veauryVitePlugins is set to vue,
     // only jsx in files in the directory named 'react_app' will be parsed with react jsx,
     // and jsx in other files will be parsed with vue jsx
-    veauryVitePlugins({
-      type: "vue",
-        // type: 'react',
-      // Configuration of @vitejs/plugin-vue
-      // vueOptions: {...},
-      // Configuration of @vitejs/plugin-react
-      // reactOptions: {...},
-      // Configuration of @vitejs/plugin-vue-jsx
-      //   vueJsxOptions: {}
-    }),
+    // veauryVitePlugins({
+    //   type: "vue",
+    //     // type: 'react',
+    //   // Configuration of @vitejs/plugin-vue
+    //   // vueOptions: {...},
+    //   // Configuration of @vitejs/plugin-react
+    //   // reactOptions: {...},
+    //   // Configuration of @vitejs/plugin-vue-jsx
+    //     // vueJsxOptions: {}
+    // }),
   ],
   // css: {
   //     preprocessorOptions: {
@@ -57,19 +57,19 @@ const yourOverrides = defineConfig({
   // }
 });
 
-export default yourOverrides;
+// export default yourOverrides;
 
-// export default createAppConfig(
-//   {
-//     // entry points
-//     main: "src/main.js",
-//     // settings: 'src/settings.js',
-//   },
-//   {
-//     // options
-//     config: yourOverrides,
-//   }
-// );
+export default createAppConfig(
+  {
+    // entry points
+    main: "src/main.js",
+    // settings: 'src/settings.js',
+  },
+  {
+    // options
+    config: yourOverrides,
+  }
+);
 
 
 // export default defineConfig({

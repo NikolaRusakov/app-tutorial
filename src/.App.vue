@@ -234,8 +234,7 @@ const value = ref("");
 // 		},
 // 	},
 // }
-// </script>
-
+</script>
 <style scoped>
 #app-content>div {
 	width: 100%;
