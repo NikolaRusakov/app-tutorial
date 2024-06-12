@@ -1,0 +1,21 @@
+Included dependencies:
+
+@vue/reactivity
+version: 3.4.27
+license: MIT
+
+@vue/runtime-core
+version: 3.4.27
+license: MIT
+
+@vue/runtime-dom
+version: 3.4.27
+license: MIT
+
+@vue/shared
+version: 3.4.27
+license: MIT
+
+vite-plugin-node-polyfills
+version: 0.22.0
+license: MIT
