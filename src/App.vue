@@ -1,5 +1,7 @@
 <script setup lang="jsx">
 import HelloWorld from './components/HelloWorld.vue'
+import Table from './components/Table.vue'
+import Calendar from "@toast-ui/react-calendar";
 
 
 import {ref} from 'vue'
@@ -16,12 +18,13 @@ injectSyncUpdateForPureReactInVue(ReactSimpleInput, {
 
 const SimpleInput = applyPureReactInVue(ReactSimpleInput)
 const value = ref("");
+const PureCalendar = applyPureReactInVue(Calendar);
 </script>
 
 <template>
-  	<SimpleInput :value="value" @change="value = $event.target.value"/>
-
-  <div>
+  <SimpleInput :value="value" @change="value = $event.target.value"/>
+  <PureCalendar />
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -29,7 +32,8 @@ const value = ref("");
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue" /> -->
+  <Table />
 </template>
 
 <style scoped>

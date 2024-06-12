@@ -33,7 +33,7 @@ npm-update:
 
 # Building
 build-js:
-	npm run dev
+	npm run build
 
 build-js-production:
 	npm run build
